@@ -3,7 +3,7 @@ Cron Expression Parser
 
 # integration testing
 run the integration tests using
-python3 -m unittest cron_parser.tests.test_integration
+python3 -m unittest tests.test_integration
 
 # main file
 run the main file using
