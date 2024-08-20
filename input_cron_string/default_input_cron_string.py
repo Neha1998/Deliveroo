@@ -1,6 +1,7 @@
-
-from .input_cron_string import CronStringInterface
-
+from .cron_string_interface import CronStringInterface
+"""
+This is the default input cron string class to be used in our problem case.
+"""
 class DefaultInputCronString(CronStringInterface):
     def __init__(self, cron_string):
         self.cron_string = cron_string
@@ -39,7 +40,7 @@ class DefaultInputCronString(CronStringInterface):
             base_range = list(range(range_start, range_end + 1))
             return base_range[::int(step)]
         elif "-" in expression:
-            start, end = map(int, part.split('-'))
+            start, end = map(int, expression.split('-'))
             return list(range(start, end + 1))
         elif "," in expression:
             return sorted(int(x) for x in expression.split(','))

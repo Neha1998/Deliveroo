@@ -1,5 +1,8 @@
 from .formatter_interface import FormatterInterface
 
+"""
+In our problem we'll be using Default Formatter.
+"""
 class DefaultFormatter(FormatterInterface):
     def format(self, parsed_cron):
         output = [

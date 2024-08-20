@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
-
+"""
+Blueprint interface for input cron string.
+The class implementing this interface will take cron_string as an input and implement the parsing logic into it.
+"""
 class CronStringInterface(ABC):
     @abstractmethod
     def _parse_cron_string(self):

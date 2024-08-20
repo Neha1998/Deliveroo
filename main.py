@@ -1,7 +1,7 @@
 import sys
-from input_cron_string.defaut_input_cron_string import DefaultInputCronString
 from cron_parser import CronParser
 from formatter.default_formatter import DefaultFormatter
+from input_cron_string.default_input_cron_string import DefaultInputCronString
 
 def main():
     if len(sys.argv) != 2:
@@ -9,7 +9,6 @@ def main():
         sys.exit(1)
 
     cron_string_input = sys.argv[1]
-
     cron_string_obj = DefaultInputCronString(cron_string_input)
     formatter = DefaultFormatter()
     parser = CronParser(cron_string_obj, formatter)
